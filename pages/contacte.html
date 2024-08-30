@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Contacte - curs de robotică</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../images/cpu_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../images/cpu_logo.png" alt="Logo curs" class="logo">
+            <nav>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="menu-links" id="menu-links">
+                    <a href="../index.html" class="meniu-link">Acasă</a>
+                    <a href="despre.html" class="meniu-link">Despre</a>
+                    <a href="galerie.html" class="meniu-link">Concursuri</a>
+                    <a href="contacte.html" class="meniu-link">Contacte</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="sectiune-contacte">
+            <h2>Informații de contact:</h2>
+
+            <div class="contact-container">
+                <div class="left-side">
+                    <div class="contact-info" >
+                        <p><strong>Data:</strong> <span id="data-curenta"></span></p>
+                        <p><strong>Adresă:</strong> bd.Decebal 91A, Chișinău, Republica Moldova</p>
+                        <p><strong>Telefon:</strong> <a href="tel:+3730000088800">+373 0000088800</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:contact@robotica.md">contact@rrobotica.md</a></p>
+                    </div>
+
+                    <div class="contact-form">
+                        <form  id="formular" >
+                            <div class="form-group">
+                                <input type="text" id="nume" name="nume" placeholder="Nume" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subiect" name="subiect" placeholder="Subiect" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesaj" required></textarea>
+                            </div>
+                            <button onclick="send()" type="button">Trimite</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <h3>Locația noastră</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.3186202336115!2d28.858441576274224!3d46.99471647114032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97eac90bbe169%3A0xe998816666295463!2zyJhjb2FsYS1ncsSDZGluacibxIMgbnIuIDE1MiDigJ5QYXMgY3UgUGFz4oCd!5e0!3m2!1sro!2s!4v1725021790454!5m2!1sro!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer >
+        <p>&copy; 2024 Curs robotică</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu-links');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
